@@ -1,4 +1,4 @@
--- DDL (data definision language) create,rename,alter,drop
+`barang`-- DDL (data definision language) create,rename,alter,drop
 
 -- menampilkan isi databases
 SHOW DATABASES;
@@ -82,6 +82,7 @@ INSERT INTO barang (barang_nama,harga_beli,harga_jual,supplier_id,satuan_id,desk
 
 -- menambahkan column atau field pada table barang
 ALTER TABLE barang ADD deskripsi TEXT;
+
 -- Select : merupakan perintah yang berfungs untuk melihat atau menampilkan data pada database.
 
 SELECT * FROM satuan;
@@ -90,6 +91,13 @@ SELECT * FROM cabang;
 SELECT * FROM barang;
 			
 
+-- update data/record barang herga_beli asalnya 3000 menjadi 4500
+UPDATE barang SET `harga_beli` = 4500 WHERE barang_id = 3
+UPDATE barang SET barang_nama = 'vitamin c' WHERE barang_id = 3
+
+
+-- delete data/record table satuan field satuan_nama liter
+DELETE FROM satuan WHERE satuan_id = 4
 
 
 
