@@ -15,13 +15,24 @@ SHOW TABLES;
 DESCRIBE `employees`
 DESCRIBE offices
 
--- inner join
+-- inner join ,employees dan office
 SELECT firstName,city FROM employees INNER JOIN offices
 ON employees.`officeCode` = offices.`officeCode`;
 
 -- using() jika kedua table memiliki nama column yang sama
 SELECT firstName,city FROM employees INNER JOIN offices
 USING (officeCode);
+
+-- inner join
+SELECT customerName,firstName FROM customers INNER JOIN employees
+ON customers.`salesRepEmployeeNumber`= employees.`employeeNumber`;
+
+SELECT employeeNumber,firstName,customerName,salesRepEmployeeNumber FROM `employees`,customers
+
+
+
+
+
 
 
 
