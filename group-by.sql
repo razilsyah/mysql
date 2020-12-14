@@ -10,7 +10,34 @@ DESCRIBE employees
 SELECT city,firstName FROM offices INNER JOIN employees
 USING (officeCode)
 
--- group by city
+-- group by city count()
 SELECT city,COUNT(*) FROM offices INNER JOIN employees
 USING (officeCode)
 GROUP BY city;
+
+
+-- group by paymentDate, sum() jumlah_pemasukan
+DESCRIBE payments
+SELECT paymentDate,amount FROM payments
+
+SELECT YEAR(paymentDate) AS tahun,SUM(amount) AS jumlah_pemasukan FROM payments
+GROUP BY YEAR(paymentDate);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
